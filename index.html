@@ -6,12 +6,12 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-black">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="https://cdn.worldvectorlogo.com/logos/instagram-2016-5.svg" alt="Logo" width="30" height="24"
@@ -19,31 +19,46 @@
                 <span class="text-danger">Instagram</span>
             </a>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Create a new post
-            </button>
 
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Dropdown button
+            <div class="d-flex align-items-center">
+
+
+
+                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Create a new post
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-                </ul>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-
     </nav>
+
+
+
+
+
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <i class="bi bi-grid-3x3 fs-3 me-2"></i> <!-- aquí esta el ícono cuadrado pero no va -->
+                    </h1>
+
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -56,6 +71,9 @@
             </div>
         </div>
     </div>
+
+
+
 
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -71,226 +89,262 @@
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-            tabindex="0"> <!-- Grid de Instagram -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 border bg-success d-flex justify-content-end">
-                        <section class="foto">
-                            <img src="https://images.pexels.com/photos/28191030/pexels-photo-28191030/free-photo-of-animal-mascota-mono-gris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                style="width: 30rem;">
-                        </section>
-                    </div>
-                    <div class="col-4 border ">
-                        <section class="foto">
-                            <img src="https://images.pexels.com/photos/28191030/pexels-photo-28191030/free-photo-of-animal-mascota-mono-gris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                style="width: 30rem;">
-                        </section>
-                    </div>
-                    <div class="col-4 border float-start">
-                        <section class="foto">
-                            <img src="https://images.pexels.com/photos/28191030/pexels-photo-28191030/free-photo-of-animal-mascota-mono-gris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                style="width: 30rem;">
-                        </section>
-                    </div>
+            tabindex="0">
 
-                    <div class="row">
-                        <div class="col-4">
-                            <section class="foto">
-                                <img src="https://images.pexels.com/photos/28191030/pexels-photo-28191030/free-photo-of-animal-mascota-mono-gris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                    style="width: 30rem;">
-                            </section>
-                        </div>
-                        <div class="col-4">
-                            <section class="foto">
-                                <img src="https://images.pexels.com/photos/28191030/pexels-photo-28191030/free-photo-of-animal-mascota-mono-gris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                    style="width: 30rem;">
-                            </section>
-                        </div>
-                        <div class="col-4">
-                            <section class="foto">
-                                <img src="https://images.pexels.com/photos/28191030/pexels-photo-28191030/free-photo-of-animal-mascota-mono-gris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                    style="width: 30rem;">
-                            </section>
+            <!-- Grid de Instagram -->
+            <div class="container m-3">
+                <div class="row g-3">
+                    <!-- Fila 1 -->
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/1.jpg" class="img-fluid" alt="Imagen 1">
+                        </section>
+                    </div>
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/2.jpg" class="img-fluid" alt="Imagen 2">
+                        </section>
+                    </div>
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/3.jpg" class="img-fluid" alt="Imagen 3">
+                        </section>
+                    </div>
+            
+                    <!-- Fila 2 -->
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/4.jpg" class="img-fluid" alt="Imagen 4">
+                        </section>
+                    </div>
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/5.jpg" class="img-fluid" alt="Imagen 5">
+                        </section>
+                    </div>
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/6.jpg" class="img-fluid" alt="Imagen 6">
+                        </section>
+                    </div>
+            
+                    <!-- Fila 3 -->
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/7.jpg" class="img-fluid" alt="Imagen 7">
+                        </section>
+                    </div>
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/8.jpg" class="img-fluid" alt="Imagen 8">
+                        </section>
+                    </div>
+                    <div class="col-4">
+                        <section class="foto">
+                            <img src="imagenes/9.jpg" class="img-fluid" alt="Imagen 9">
+                        </section>
+                    </div>
+                </div>
+            </div>
+            
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
 
-        <!-- Perfil de Instagram -->
+            <!-- Perfil de Instagram -->
 
-        <div class="tab-pane fade d-flex justify-content-center" id="profile-tab-pane" role="tabpanel"
-            aria-labelledby="profile-tab" tabindex="0">
-            <div class="flex-column">
+            <div class="tab-pane fade d-flex justify-content-center" id="profile-tab-pane" role="tabpanel"
+                aria-labelledby="profile-tab" tabindex="0">
+                <div class="flex-column mb-5">
 
-                <section class="border mt-3" style="width: 30rem;">
+                    <section class="border mt-3" style="width: 30rem;">
                         <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
                             <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Primera foto</p>
                             <p class="m-0">01/09</p>
                         </header>
-                 
-                    <main class="foto">
-                        <img src="imagenes/1.jpg" style="width: 30rem;">
-                    </main>
 
-                    <footer class="p-2">
-                        <p class="fw-bold">254 likes</p>
-                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-                    </footer>
-                </section>
+                        <main class="foto">
+                            <img src="imagenes/1.jpg" style="width: 30rem;">
+                        </main>
 
-                <section class="border mt-3" style="width: 30rem;">
-                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
-                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Segunda foto</p>
-                        <p class="m-0">02/09</p>
-                    </header>
-             
-                <main class="foto">
-                    <img src="imagenes/2.jpg" style="width: 30rem;">
-                </main>
+                        <footer class="p-2">
+                            <p class="fw-bold">254 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
 
-                <footer class="p-2">
-                    <p class="fw-bold">254 likes</p>
-                    <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-                        laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-                </footer>
-            </section>
+                    <section class="border mt-3" style="width: 30rem;">
+                        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Segunda foto</p>
+                            <p class="m-0">02/09</p>
+                        </header>
 
-            <section class="border mt-3" style="width: 30rem;">
-                <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
-                    <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Tercera foto</p>
-                    <p class="m-0">03/09</p>
-                </header>
-         
-            <main class="foto">
-                <img src="imagenes/3.jpg" style="width: 30rem;">
-            </main>
+                        <main class="foto">
+                            <img src="imagenes/2.jpg" style="width: 30rem;">
+                        </main>
 
-            <footer class="p-2">
-                <p class="fw-bold">254 likes</p>
-                <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-                    laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-            </footer>
-        </section>
+                        <footer class="p-2">
+                            <p class="fw-bold">100248 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
 
-        <section class="border mt-3" style="width: 30rem;">
-            <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
-                <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Cuarta foto</p>
-                <p class="m-0">04/09</p>
-            </header>
-     
-        <main class="foto">
-            <img src="imagenes/4.jpg" style="width: 30rem;">
-        </main>
+                    <section class="border mt-3" style="width: 30rem;">
+                        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Tercera foto</p>
+                            <p class="m-0">03/09</p>
+                        </header>
 
-        <footer class="p-2">
-            <p class="fw-bold">254 likes</p>
-            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-        </footer>
-    </section>
+                        <main class="foto">
+                            <img src="imagenes/3.jpg" style="width: 30rem;">
+                        </main>
 
-    <section class="border mt-3" style="width: 30rem;">
-        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
-            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Quinta foto</p>
-            <p class="m-0">05/09</p>
-        </header>
- 
-    <main class="foto">
-        <img src="imagenes/5.jpg" style="width: 30rem;">
-    </main>
+                        <footer class="p-2">
+                            <p class="fw-bold">3154 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
 
-    <footer class="p-2">
-        <p class="fw-bold">254 likes</p>
-        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-    </footer>
-</section>
+                    <section class="border mt-3" style="width: 30rem;">
+                        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Cuarta foto</p>
+                            <p class="m-0">04/09</p>
+                        </header>
 
-<section class="border mt-3" style="width: 30rem;">
-    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
-        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Sexta foto</p>
-        <p class="m-0">06/09</p>
-    </header>
+                        <main class="foto">
+                            <img src="imagenes/4.jpg" style="width: 30rem;">
+                        </main>
 
-<main class="foto">
-    <img src="imagenes/6.jpg" style="width: 30rem;">
-</main>
+                        <footer class="p-2">
+                            <p class="fw-bold">80009 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
 
-<footer class="p-2">
-    <p class="fw-bold">254 likes</p>
-    <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-        laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-</footer>
-</section>
+                    <section class="border mt-3" style="width: 30rem;">
+                        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Quinta foto</p>
+                            <p class="m-0">05/09</p>
+                        </header>
 
+                        <main class="foto">
+                            <img src="imagenes/5.jpg" style="width: 30rem;">
+                        </main>
 
-<section class="border mt-3" style="width: 30rem;">
-    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
-        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Séptima foto</p>
-        <p class="m-0">07/09</p>
-    </header>
+                        <footer class="p-2">
+                            <p class="fw-bold">694 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
 
-<main class="foto">
-    <img src="imagenes/7.jpg" style="width: 30rem;">
-</main>
+                    <section class="border mt-3" style="width: 30rem;">
+                        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Sexta foto</p>
+                            <p class="m-0">06/09</p>
+                        </header>
 
-<footer class="p-2">
-    <p class="fw-bold">254 likes</p>
-    <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-        laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-</footer>
-</section>
+                        <main class="foto">
+                            <img src="imagenes/6.jpg" style="width: 30rem;">
+                        </main>
 
-<section class="border mt-3" style="width: 30rem;">
-    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
-        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Octava foto</p>
-        <p class="m-0">08/09</p>
-    </header>
-
-<main class="foto">
-    <img src="imagenes/8.jpg" style="width: 30rem;">
-</main>
-
-<footer class="p-2">
-    <p class="fw-bold">254 likes</p>
-    <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-        laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-</footer>
-</section>
-
-<section class="border mt-3" style="width: 30rem;">
-    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
-        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Novena foto</p>
-        <p class="m-0">09/09</p>
-    </header>
-
-<main class="foto">
-    <img src="imagenes/9.jpg" style="width: 30rem;">
-</main>
-
-<footer class="p-2">
-    <p class="fw-bold">254 likes</p>
-    <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae unde
-        laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
-</footer>
-</section>
+                        <footer class="p-2">
+                            <p class="fw-bold">2540 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
 
 
+                    <section class="border mt-3" style="width: 30rem;">
+                        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Séptima foto</p>
+                            <p class="m-0">07/09</p>
+                        </header>
 
+                        <main class="foto">
+                            <img src="imagenes/7.jpg" style="width: 30rem;">
+                        </main>
+
+                        <footer class="p-2">
+                            <p class="fw-bold">894 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
+
+                    <section class="border mt-3" style="width: 30rem;">
+                        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Octava foto</p>
+                            <p class="m-0">08/09</p>
+                        </header>
+
+                        <main class="foto">
+                            <img src="imagenes/8.jpg" style="width: 30rem;">
+                        </main>
+
+                        <footer class="p-2">
+                            <p class="fw-bold">1009 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
+
+                    <section class="border mt-3" style="width: 30rem;">
+                        <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                            <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Novena foto</p>
+                            <p class="m-0">09/09</p>
+                        </header>
+
+                        <main class="foto">
+                            <img src="imagenes/9.jpg" style="width: 30rem;">
+                        </main>
+
+                        <footer class="p-2">
+                            <p class="fw-bold">254 likes</p>
+                            <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quae
+                                unde
+                                laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                        </footer>
+                    </section>
+
+
+
+                </div>
             </div>
+
         </div>
 
-    </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
