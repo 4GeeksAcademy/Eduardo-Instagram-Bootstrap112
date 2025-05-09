@@ -1,0 +1,387 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn.worldvectorlogo.com/logos/instagram-2016-5.svg" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                <span class="text-danger">Instagram</span>
+            </a>
+
+            <div class="d-flex align-items-center">
+
+
+                <!-- Create a new post -->
+
+                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Create a new post
+                </button>
+
+                <!-- Modal dentro de Create a new post -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                    <span class="fw-bold">Create a new
+                                        post</span>
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <!-- Texto del caption -->
+                                <label for="caption" class="form-label fw-bold">Caption:</label>
+                                <textarea class="form-control" id="caption" rows="3"
+                                    placeholder="Add the caption of your post here"></textarea>
+
+
+                                <!-- Iconos camara y ubicación-->
+
+                                <div class="mt-3">
+                                    <button class="btn btn-light">
+                                        <i class="bi bi-camera-fill"></i> <!-- Ícono de cámara -->
+                                    </button>
+                                    <button class="btn btn-light">
+                                        <i class="bi bi-geo-alt-fill"></i> <!-- Ícono de ubicación -->
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <!-- Botón "Close" -->
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                <!-- Botón "Publish"-->
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Rueda ajustes -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-gear"></i>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item  fw-medium" href="#">Profile</a></li>
+                        <li><a class="dropdown-item fw-medium" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item mb-2 fw-medium" href="#">Privacy and Data</a></li>
+                        <li style="border-top: 1px solid #000; "><a class="dropdown-item text-danger mt-1 fw-medium"
+                                href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Home/Profile -->
+    <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    </h1>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist"> <!-- Aquí centro iconos-->
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                <i class="bi bi-grid-3x3 fs-3 me-2"></i> <!-- Grid icono -->
+            </button>
+        </li>
+
+
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                <i class="bi bi-square-fill fs-3"></i> <!-- Perfil icono -->
+            </button>
+        </li>
+    </ul>
+    <div class="tab-content  mb-3" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+
+            <!-- Grid de Instagram -->
+            <div class="container-fluid mt-3 mb-3 ms-0 me-0">
+                <div class="row g-3">
+                    <!-- Fila 1 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/1.jpg" class="img-fluid" alt="Imagen 1">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/2.jpg" class="img-fluid" alt="Imagen 2">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/3.jpg" class="img-fluid" alt="Imagen 3">
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/4.jpg" class="img-fluid" alt="Imagen 4">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/5.jpg" class="img-fluid" alt="Imagen 5">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/6.jpg" class="img-fluid" alt="Imagen 6">
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/7.jpg" class="img-fluid" alt="Imagen 7">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/8.jpg" class="img-fluid" alt="Imagen 8">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="ratio ratio-1x1">
+                            <img src="imagenes/9.jpg" class="img-fluid" alt="Imagen 9">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Perfil de Instagram-->
+
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+            aria-labelledby="profile-tab" tabindex="0">
+            <div class="flex-column mb-5 d-flex align-items-center">
+
+                <section class="border mt-3 w-100" style="max-width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Primera foto</p>
+                        <p class="m-0">01/09</p>
+                    </header>
+
+                    <main class="foto">
+                        
+                        <img src="imagenes/1.jpg" class="img-fluid w-100" alt="Foto1">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">254 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+
+                <section class="border mt-3 w-100" style="max-width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Segunda foto</p>
+                        <p class="m-0">02/09</p>
+                    </header>
+
+                    <main class="foto">
+                        <img src="imagenes/2.jpg" class="img-fluid w-100" alt="Foto2">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">100248 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+
+                <section class="border mt-3 w-100" style="max-width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Tercera foto</p>
+                        <p class="m-0">03/09</p>
+                    </header>
+
+                    <main class="foto">
+                        <img src="imagenes/3.jpg" class="img-fluid w-100" alt="Foto3">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">3154 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+
+                <section class="border mt-3 w-100" style="max-width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Cuarta foto</p>
+                        <p class="m-0">04/09</p>
+                    </header>
+
+                    <main class="foto">
+                        <img src="imagenes/4.jpg" class="img-fluid w-100" alt="Foto4">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">80009 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+
+                <section class="border mt-3 w-100" style="max-width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Quinta foto</p>
+                        <p class="m-0">05/09</p>
+                    </header>
+
+                    <main class="foto">
+                        <img src="imagenes/5.jpg" class="img-fluid w-100" alt="Foto5">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">694 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+
+                <section class="border mt-3 w-100" style="max-width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Sexta foto</p>
+                        <p class="m-0">06/09</p>
+                    </header>
+
+                    <main class="foto">
+                        <img src="imagenes/6.jpg" class="img-fluid w-100" alt="Foto6">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">2540 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+
+
+                <section class="border mt-3" style="width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Séptima foto</p>
+                        <p class="m-0">07/09</p>
+                    </header>
+
+                    <main class="foto">
+                        <img src="imagenes/7.jpg" class="img-fluid w-100" alt="Foto7">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">894 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+
+                <section class="border mt-3" style="width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Octava foto</p>
+                        <p class="m-0">08/09</p>
+                    </header>
+
+                    <main class="foto">
+                        <img src="imagenes/8.jpg" class="img-fluid w-100" alt="Foto8">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">1009 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+
+                <section class="border mt-3" style="width: 30rem;">
+                    <header class="d-flex justify-content-between p-2 fw-bold align-items-center py-3 px-2">
+                        <p class="fs-4 m-0" style="font-family:'Fredoka', sans-serif;">Novena foto</p>
+                        <p class="m-0">09/09</p>
+                    </header>
+
+                    <main class="foto">
+                        <img src="imagenes/9.jpg" class="img-fluid w-100" alt="Foto9">
+                    </main>
+
+                    <footer class="p-2">
+                        <p class="fw-bold">254 likes</p>
+                        <p class="fw-semibold fs-6 mb-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quae
+                            unde
+                            laborum numquam optio odit porro sapiente sit accusamus cupiditate natus?</p>
+                    </footer>
+                </section>
+ 
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
